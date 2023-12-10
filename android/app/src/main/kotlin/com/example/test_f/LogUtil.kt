@@ -12,11 +12,7 @@ object LogUtil {
         channelLog = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.example.methodchannel/interop")
         channelLog?.setMethodCallHandler{ methodCall: MethodCall, result: MethodChannel.Result ->
             if (methodCall.method == "push") {
-                com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "[s-kitayama] ネイティブログ:777")
-                com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "[s-kitayama] ネイティブログ:888")
-                com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "[s-kitayama] ネイティブログ:999")
-                com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "[s-kitayama] ネイティブログ:000")
-                com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "[s-kitayama] ネイティブログ:111")
+                com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "ネイティブログ:777")
             }
             else
                 result.notImplemented()
@@ -24,7 +20,7 @@ object LogUtil {
     }
 
     fun outputLog(msg: String) {
-        Log.d("", "[s-kitayama] ネイティブログ")
-        com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "[s-kitayama] ネイティブログ:$msg")
+        Log.d("", "ネイティブログ")
+        com.example.test_f.LogUtil.channelLog?.invokeMethod("outputLog", "ネイティブログ:$msg")
     }
 }

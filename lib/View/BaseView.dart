@@ -13,6 +13,6 @@ base class BaseView extends StatelessWidget {
   }
 
   void printLog() {
-    LogUtil.shared.outputLog('[s-kitayama] printLog');
+    LogUtil.shared.outputLog('printLog');
   }
 }

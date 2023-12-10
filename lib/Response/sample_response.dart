@@ -16,7 +16,7 @@ class SampleResponse with _$SampleResponse implements Response {
 
   @override
   T parse<T>(Map<String, Object?> msg) {
-    LogUtil.shared.outputLog('[s-kitayama] parse');
+    LogUtil.shared.outputLog('parse');
     final result = SampleResponse.fromJson(msg);
     return result as T;
   }

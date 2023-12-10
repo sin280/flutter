@@ -51,10 +51,10 @@ class BaseModel {
   static final BaseModel shared = BaseModel._();
   StateChangeProvider provider = StateChangeProvider();
   void log() {
-    LogUtil.shared.outputLog('[s-kitayama] BaseModel');
+    LogUtil.shared.outputLog('BaseModel');
   }
   BaseModel._() {
-    print('[s-kitayama] BaseModel create');
+    print('BaseModel create');
   }
 
   Future<void> setState(DebugState state) async {

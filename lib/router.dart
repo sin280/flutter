@@ -27,7 +27,7 @@ final goRouter = GoRouter(
         return MaterialPage(
           key: state.pageKey,
           child: FirstView(onTap: () {
-            print('[s-kitayama] ルーターonTap');
+            print('ルーターonTap');
           },),
         );
       },

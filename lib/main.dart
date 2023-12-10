@@ -77,6 +77,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void onTap() {
-    print('[s-kitayama] onTap');
+    print('onTap');
   }
 }

@@ -38,8 +38,6 @@ base class FirstView extends BaseView {
                 onPressed: () async {
                   final SharedPreferences prefs = await SharedPreferences.getInstance();
                   await BaseModel.shared.setState(DebugState.three);
-                  // final state = await BaseModel.shared.getState();
-                  // LogUtil.shared.outputLog('[s-kitayama] state: $state');
                 },
               ),
             ),
@@ -57,14 +55,14 @@ base class FirstView extends BaseView {
   }
 
   Future<void> changeCallback() async {
-    LogUtil.shared.outputLog('[s-kitayama] changeCallback');
+    LogUtil.shared.outputLog('changeCallback');
     final state = await BaseModel.shared.getState();
-    LogUtil.shared.outputLog('[s-kitayama] state: $state');
+    LogUtil.shared.outputLog('state: $state');
     final state2 = BaseModel.shared.getState();
-    LogUtil.shared.outputLog('[s-kitayama] state2: $state2');
+    LogUtil.shared.outputLog('state2: $state2');
   }
 
   void stringSubaru(String string) {
-    LogUtil.shared.outputLog('[s-kitayama] stringSubaru: $string');
+    LogUtil.shared.outputLog('stringSubaru: $string');
   }
 }

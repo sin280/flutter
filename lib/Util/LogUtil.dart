@@ -3,9 +3,7 @@ import 'package:logger/logger.dart';
 
 class LogUtil {
   static final LogUtil shared = LogUtil._();
-  LogUtil._() {
-    print('[s-kitayama] create');
-  }
+  LogUtil._();
 
   static Logger logger = Logger(printer: PrettyPrinter(
       methodCount: 0,
@@ -18,7 +16,6 @@ class LogUtil {
   static const MethodChannel channel = const MethodChannel('com.example.methodchannel/interop');
 
   Future<void> start() async {
-    print('[s-kitayama] start');
     channel.setMethodCallHandler(_platformCallHandler);
   }
 
